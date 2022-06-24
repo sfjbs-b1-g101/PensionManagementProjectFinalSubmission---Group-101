@@ -1,0 +1,17 @@
+server:
+  port: 8083
+  
+spring:
+  application:
+    name: API_GATEWAY
+    
+    
+  cloud:
+    gateway:
+      routes:
+      - id:MyClient-Service
+      uri:
+      predicate:
+      - PATH=/API_SERVICE/**
+      
+      
